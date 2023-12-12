@@ -1,0 +1,7 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/DesignPattern/.vs/DesignPatterns
+/DesignPattern/StrategyPattern/bin/Debug/net6.0
+/DesignPattern/StrategyPattern/obj
