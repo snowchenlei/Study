@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StrategyPattern", "StrategyPattern\StrategyPattern.csproj", "{2F5833ED-A004-499F-9C5A-6D6FAF3A43AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacadePattern", "FacadePattern\FacadePattern.csproj", "{A8C31690-9BBA-4EFF-A8C2-A8AEB632A7EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2F5833ED-A004-499F-9C5A-6D6FAF3A43AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F5833ED-A004-499F-9C5A-6D6FAF3A43AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F5833ED-A004-499F-9C5A-6D6FAF3A43AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8C31690-9BBA-4EFF-A8C2-A8AEB632A7EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C31690-9BBA-4EFF-A8C2-A8AEB632A7EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C31690-9BBA-4EFF-A8C2-A8AEB632A7EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C31690-9BBA-4EFF-A8C2-A8AEB632A7EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

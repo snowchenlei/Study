@@ -3,5 +3,7 @@
 ################################################################################
 
 /DesignPattern/.vs/DesignPatterns
-/DesignPattern/StrategyPattern/bin/Debug/net6.0
+/DesignPattern/StrategyPattern/bin
 /DesignPattern/StrategyPattern/obj
+/DesignPattern/FacadePattern/bin
+/DesignPattern/FacadePattern/obj
