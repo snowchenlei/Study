@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StrategyPattern", "Strategy
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacadePattern", "FacadePattern\FacadePattern.csproj", "{A8C31690-9BBA-4EFF-A8C2-A8AEB632A7EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuilderPattern", "BuilderPattern\BuilderPattern.csproj", "{C1C712C0-E93A-4FAE-882D-39011F8BEC21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuilderPattern", "BuilderPattern\BuilderPattern.csproj", "{C1C712C0-E93A-4FAE-882D-39011F8BEC21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverPattern", "ObserverPattern\ObserverPattern.csproj", "{1A15B1E3-809D-4D95-BD41-630CCC48A76A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C1C712C0-E93A-4FAE-882D-39011F8BEC21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1C712C0-E93A-4FAE-882D-39011F8BEC21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1C712C0-E93A-4FAE-882D-39011F8BEC21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A15B1E3-809D-4D95-BD41-630CCC48A76A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A15B1E3-809D-4D95-BD41-630CCC48A76A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A15B1E3-809D-4D95-BD41-630CCC48A76A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A15B1E3-809D-4D95-BD41-630CCC48A76A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
