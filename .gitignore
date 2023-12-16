@@ -7,7 +7,9 @@
 /DesignPattern/StrategyPattern/obj
 /DesignPattern/FacadePattern/bin
 /DesignPattern/FacadePattern/obj
-/DesignPattern/BuilderPattern/bin/Debug/net6.0
+/DesignPattern/BuilderPattern/bin
 /DesignPattern/BuilderPattern/obj
-/DesignPattern/ObserverPattern/bin/Debug/net6.0
+/DesignPattern/ObserverPattern/bin
 /DesignPattern/ObserverPattern/obj
+/DesignPattern/AbstractFactoryPattern/bin
+/DesignPattern/AbstractFactoryPattern/obj
