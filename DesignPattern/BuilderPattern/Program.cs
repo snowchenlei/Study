@@ -16,6 +16,7 @@ director.Construct(b2);
 Product p2 = b2.GetResult();
 p2.Show();
 
+// 避免必填属性过多导致构造函数太长，如果通过Set方法又无法关联校验的问题。
 // 通过建造者模式创建不可变对象
 ResourceConfig config = new ResourceConfig.Builder()
     .SetName("dbconnection")
