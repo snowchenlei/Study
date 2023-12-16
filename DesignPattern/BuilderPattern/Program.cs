@@ -16,4 +16,12 @@ director.Construct(b2);
 Product p2 = b2.GetResult();
 p2.Show();
 
+// 通过建造者模式创建不可变对象
+ResourceConfig config = new ResourceConfig.Builder()
+    .SetName("dbconnection")
+    .SetMaxTotal(16)
+    .SetMaxIdle(10)
+    .SetMinIdle(12)
+    .Build();
+
 Console.ReadLine();
