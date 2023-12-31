@@ -28,5 +28,7 @@
 /DesignPattern/CommandPattern/obj
 /DesignPattern/ChainOfResponsibilityPattern/bin
 /DesignPattern/ChainOfResponsibilityPattern/obj
-/DesignPattern/MediatorPattern/bin/Debug/net6.0
+/DesignPattern/MediatorPattern/bin
 /DesignPattern/MediatorPattern/obj
+/DesignPattern/FlyweightPattern/bin
+/DesignPattern/FlyweightPattern/obj
