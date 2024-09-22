@@ -47,6 +47,7 @@ public class SequenceList<T> : IListDs<T>
         {
             Resize();
             _items[_count] = item;
+            _count++;
         }
     }
 

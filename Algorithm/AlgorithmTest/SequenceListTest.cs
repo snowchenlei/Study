@@ -49,7 +49,8 @@ public class SequenceListTest
     {
         int count = 5;
         IListDs<int> items = GetItems(count);
-        items.GetLength().ShouldBe(count);
+        items.Add(999);
+        items.GetLength().ShouldBe(count+1);
     }
 
     [Theory]
