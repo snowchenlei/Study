@@ -20,6 +20,7 @@ public class LinkedListDsTest
         IListDs<int> items = new SequenceList<int>();
         items.IsEmpty().ShouldBeTrue();
     }
+
     [Fact]
     public void GetLengthTest()
     {
@@ -34,7 +35,7 @@ public class LinkedListDsTest
         int count = 5;
         IListDs<int> items = GetItems(count);
         items.Add(999);
-        items.GetLength().ShouldBe(count+1);
+        items.GetLength().ShouldBe(count + 1);
     }
 
     [Theory]
