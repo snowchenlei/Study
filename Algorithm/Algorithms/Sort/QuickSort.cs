@@ -35,8 +35,8 @@ public class QuickSort
             return;
         }
         int pivot = PartitionWithSwap(items, left, right);
-        Sort(items, left, pivot - 1);
-        Sort(items, pivot + 1, right);
+        SortWithSwap(items, left, pivot - 1);
+        SortWithSwap(items, pivot + 1, right);
     }
 
     /// <summary>

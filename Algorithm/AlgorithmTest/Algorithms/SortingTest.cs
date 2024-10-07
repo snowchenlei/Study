@@ -101,6 +101,7 @@ public class SortingTest
     }
 
     [Theory]
+    [InlineData(new int[] { 4, 6, 3, 2 })]
     [InlineData(new int[] { 1, 2, 3, 4, 5 })]
     [InlineData(new int[] { 8, 2, 4, 2, 3, 9, 16, 25 })]
     public void QuickSortWithSwapTest(int[] items)
