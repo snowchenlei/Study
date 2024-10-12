@@ -157,4 +157,23 @@ public class SortingTest
         new QuickSort().SortWithTailRecursion(items, 0, items.Length);
         items.Length.ShouldBe(0);
     }
+
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3, 4, 5 })]
+    [InlineData(new int[] { 8, 2, 4, 2, 3, 9, 16, 25 })]
+    public void MergeSortTest(int[] items)
+    {
+        new MergeSort().Sort(items, 0, items.Length - 1);
+        items.Length.ShouldBe(items.Length);
+        items[0].ShouldBe(items.Min());
+        items[^1].ShouldBe(items.Max());
+    }
+
+    [Fact]
+    public void MergeSortTest_Empty()
+    {
+        int[] items = [];
+        new InsertionSort().Sort(items);
+        items.Length.ShouldBe(0);
+    }
 }
