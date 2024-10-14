@@ -1,7 +1,7 @@
 ﻿namespace Algorithms.Sort;
 
 /// <summary>
-/// 快速排序
+/// 快速排序。（二分策略。从右找比其小的，从左找比其大的，交换数据）
 /// </summary>
 public class QuickSort
 {
