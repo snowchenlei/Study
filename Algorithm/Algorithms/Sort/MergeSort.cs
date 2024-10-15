@@ -1,5 +1,8 @@
 ﻿namespace Algorithms.Sort;
 
+/// <summary>
+/// 归并排序。
+/// </summary>
 public class MergeSort
 {
     public void Sort(int[] items, int left, int right)
