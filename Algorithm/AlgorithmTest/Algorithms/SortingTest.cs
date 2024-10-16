@@ -176,4 +176,23 @@ public class SortingTest
         new InsertionSort().Sort(items);
         items.Length.ShouldBe(0);
     }
+
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3, 4, 5 })]
+    [InlineData(new int[] { 8, 2, 4, 2, 3, 9, 16, 25 })]
+    public void HeapSortTest(int[] items)
+    {
+        new HeapSort().Sort(items);
+        items.Length.ShouldBe(items.Length);
+        items[0].ShouldBe(items.Min());
+        items[^1].ShouldBe(items.Max());
+    }
+
+    [Fact]
+    public void HeapSortTest_Empty()
+    {
+        int[] items = [];
+        new InsertionSort().Sort(items);
+        items.Length.ShouldBe(0);
+    }
 }
