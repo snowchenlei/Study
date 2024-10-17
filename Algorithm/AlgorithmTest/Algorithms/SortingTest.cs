@@ -195,4 +195,22 @@ public class SortingTest
         new InsertionSort().Sort(items);
         items.Length.ShouldBe(0);
     }
+
+    [Fact]
+    public void BucketSortTest()
+    {
+        decimal[] items = [0.49m, 0.96m, 0.82m, 0.09m, 0.57m, 0.43m, 0.91m, 0.75m, 0.15m, 0.37m];
+        new BucketSort().Sort(items);
+        items.Length.ShouldBe(items.Length);
+        items[0].ShouldBe(items.Min());
+        items[^1].ShouldBe(items.Max());
+    }
+
+    [Fact]
+    public void BucketSortTest_Empty()
+    {
+        decimal[] items = [];
+        new BucketSort().Sort(items);
+        items.Length.ShouldBe(0);
+    }
 }
