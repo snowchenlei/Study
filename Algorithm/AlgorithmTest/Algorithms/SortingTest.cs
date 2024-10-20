@@ -232,4 +232,24 @@ public class SortingTest
         new CountingSort().Sort(items);
         items.Length.ShouldBe(0);
     }
+
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3, 4, 5 })]
+    [InlineData(new int[] { 8, 2, 4, 2, 3, 9, 65, 5 })]
+    [InlineData(new int[] { 7515426, 4569875, 1269875, 4569873, 5874569, 8459876, 5748965, 8745632 })]
+    public void RadixSortTest(int[] items)
+    {
+        new RadixSort().Sort(items);
+        items.Length.ShouldBe(items.Length);
+        items[0].ShouldBe(items.Min());
+        items[^1].ShouldBe(items.Max());
+    }
+
+    [Fact]
+    public void RadixSortTest_Empty()
+    {
+        int[] items = [];
+        new RadixSort().Sort(items);
+        items.Length.ShouldBe(0);
+    }
 }
