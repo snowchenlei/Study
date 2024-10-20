@@ -6,7 +6,7 @@ namespace AlgorithmTest.Algorithms;
 public class SearchingTest
 {
     [Theory]
-    [InlineData(new int[]{ 1, 2, 3 }, 2, 1)]
+    [InlineData(new int[] { 1, 2, 3 }, 2, 1)]
     [InlineData(new int[] { 1, 2, 3 }, 3, 2)]
     [InlineData(new int[] { 1, 2, 3 }, 1, 0)]
     [InlineData(new int[] { 1, 2, 4, 3 }, 4, 2)]
@@ -14,6 +14,18 @@ public class SearchingTest
     public void BinarySearchTest(int[] items, int target, int targetIndex)
     {
         int index = new Searching().BinarySearch(items, target);
+        index.ShouldBe(targetIndex);
+    }
+
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3 }, 2, 1)]
+    [InlineData(new int[] { 1, 2, 3 }, 3, 2)]
+    [InlineData(new int[] { 1, 2, 3 }, 1, 0)]
+    [InlineData(new int[] { 1, 2, 4, 3 }, 4, 2)]
+    [InlineData(new int[] { 1, 2, 4, 3 }, 2, 1)]
+    public void BinarySearchWithDivideAndConquerTest(int[] items, int target, int targetIndex)
+    {
+        int index = new Searching().BinarySearchWithDivideAndConquer(items, target);
         index.ShouldBe(targetIndex);
     }
 
