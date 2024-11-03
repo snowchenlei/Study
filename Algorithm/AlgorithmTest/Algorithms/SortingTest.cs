@@ -84,6 +84,25 @@ public class SortingTest
     [Theory]
     [InlineData(new int[] { 1, 2, 3, 4, 5 })]
     [InlineData(new int[] { 8, 2, 4, 2, 3, 9, 16, 25 })]
+    public void ShellSortTest(int[] items)
+    {
+        new ShellSort().Sort(items);
+        items.Length.ShouldBe(items.Length);
+        items[0].ShouldBe(items.Min());
+        items[^1].ShouldBe(items.Max());
+    }
+
+    [Fact]
+    public void ShellSortTest_Empty()
+    {
+        int[] items = [];
+        new ShellSort().Sort(items);
+        items.Length.ShouldBe(0);
+    }
+
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3, 4, 5 })]
+    [InlineData(new int[] { 8, 2, 4, 2, 3, 9, 16, 25 })]
     public void QuickSortTest(int[] items)
     {
         new QuickSort().Sort(items, 0, items.Length - 1);
