@@ -16,17 +16,7 @@ public class ShellSort
         }
         while (h >= 1)
         {
-            for (int i = h; i < length; i++)
-            {
-                int bas = items[i], j = i;
-                while (j >= h && items[j - h] > bas)
-                {
-                    items[j] = items[j - h];
-                    j -= h;
-                }
-
-                items[j] = bas;
-            }
+            new InsertionSort().SortImpl(items, h);
             h /= step;
         }
     }
