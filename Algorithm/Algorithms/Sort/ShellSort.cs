@@ -1,5 +1,8 @@
 ﻿namespace Algorithms.Sort;
 
+/// <summary>
+/// 希尔排序。（插入排序的优化版本。）
+/// </summary>
 public class ShellSort
 {
     public void Sort(int[] items)
@@ -15,12 +18,16 @@ public class ShellSort
         {
             for (int i = h; i < length; i++)
             {
-                for (int j = i; j >= h && items[j - h] > items[j]; j -= h)
+                int bas = items[i], j = i;
+                while (j >= h && items[j - h] > bas)
                 {
-                    (items[j], items[j - h]) = (items[j - h], items[j]);
+                    items[j] = items[j - h];
+                    j -= h;
                 }
+
+                items[j] = bas;
             }
-            h = h / step;
+            h /= step;
         }
     }
 }

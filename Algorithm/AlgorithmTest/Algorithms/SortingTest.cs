@@ -65,6 +65,7 @@ public class SortingTest
     [Theory]
     [InlineData(new int[] { 1, 2, 3, 4, 5 })]
     [InlineData(new int[] { 8, 2, 4, 2, 3, 9, 16, 25 })]
+    [InlineData(new int[] { 4, 2, 1, 23, 54, 67, 243, 654, 12, 5, 36, 73, 877, 12, 3, 675, 34, 57, 88, 3, 4, 43 })]
     public void InsertionSortTest(int[] items)
     {
         new InsertionSort().Sort(items);
@@ -83,7 +84,8 @@ public class SortingTest
 
     [Theory]
     [InlineData(new int[] { 1, 2, 3, 4, 5 })]
-    [InlineData(new int[] { 8, 2, 4, 2, 3, 9, 16, 25 })]
+    [InlineData(new int[] { 8, 2, 4, 2, 17, 9, 16, 25, 6, 5 })]
+    [InlineData(new int[] { 4, 2, 1, 23, 54, 67, 243, 654, 12, 5, 36, 73, 877, 12, 3, 675, 34, 57, 88, 3, 4, 43 })]
     public void ShellSortTest(int[] items)
     {
         new ShellSort().Sort(items);

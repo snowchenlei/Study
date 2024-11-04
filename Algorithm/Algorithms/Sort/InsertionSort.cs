@@ -10,7 +10,7 @@ public class InsertionSort
         for (int i = 1; i < items.Length; i++)
         {
             int bas = items[i], j = i;
-            while (j > 0 && items[j - 1] > bas)
+            while (j >= 1 && items[j - 1] > bas)
             {
                 items[j] = items[j - 1];
                 j--;
