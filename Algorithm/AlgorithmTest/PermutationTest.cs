@@ -10,8 +10,7 @@ public class PermutationTest
     [InlineData(new int[] { 1, 2, 3 })]
     public void V1_Test(int[] nums)
     {
-        List<List<int>> res = new();
-        new Permutations1<int>().Backtrack([], nums, new bool[nums.Length].ToList(), res);
+        List<List<int>> res = new Permutations1<int>().Backtrack(nums);
         res.Count.ShouldBe(6);
         res.ForEach(r => r.Count.ShouldBe(3));
     }
@@ -20,8 +19,7 @@ public class PermutationTest
     [InlineData(new int[] { 1, 1, 3 })]
     public void V2_Test(int[] nums)
     {
-        List<List<int>> res = new();
-        new Permutations2<int>().Backtrack([], nums, new bool[nums.Length].ToList(), res);
+        List<List<int>> res = new Permutations2<int>().Backtrack(nums);
         res.Count.ShouldBe(3);
         res.ForEach(r => r.Count.ShouldBe(3));
     }

@@ -8,13 +8,15 @@
 /// </summary>
 public class SubsetSum3
 {
-    public void Backtrack(List<int> state, int[] choices, int target, int start, List<List<int>> res)
+    public List<List<int>> Backtrack(int[] nums, int target)
     {
-        Array.Sort(choices);
-        BacktrackImpl(state, choices, target, start, res);
+        List<List<int>> res = new();
+        Array.Sort(nums);
+        Backtrack([], nums, target, 0, res);
+        return res;
     }
 
-    public void BacktrackImpl(List<int> state, int[] choices, int target, int start, List<List<int>> res)
+    private void Backtrack(List<int> state, int[] choices, int target, int start, List<List<int>> res)
     {
         if (IsSolution(target))
         {

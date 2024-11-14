@@ -6,7 +6,14 @@
 /// </summary>
 public class SubsetSum1
 {
-    public void Backtrack(List<int> state, int[] choices, int target, int total, List<List<int>> res)
+    public List<List<int>> Backtrack(int[] nums, int target)
+    {
+        List<List<int>> res = new();
+        Backtrack([], nums, target, 0, res);
+        return res;
+    }
+
+    private void Backtrack(List<int> state, int[] choices, int target, int total, List<List<int>> res)
     {
         if (IsSolution(target, total))
         {
