@@ -13,15 +13,16 @@ public class Permutations2<T>
     /// <param name="choices">初始数据</param>
     /// <param name="selected">标记是否选过</param>
     /// <param name="res">满足条件的结果</param>
-    public void Backtrack(List<T> state, List<T> choices, List<bool> selected, List<List<T>> res)
+    public void Backtrack(List<T> state, T[] choices, List<bool> selected, List<List<T>> res)
     {
         if (IsSolution(state, choices))
         {
             RecordSolution(state, res);
         }
 
+        // 每轮同一个元素只允许选择一次
         HashSet<T> duplicated = [];
-        for (int i = 0; i < choices.Count; i++)
+        for (int i = 0; i < choices.Length; i++)
         {
             T choice = choices[i];
             if (selected[i] || duplicated.Contains(choice))
@@ -48,9 +49,9 @@ public class Permutations2<T>
         state.Add(choice);
     }
 
-    private bool IsSolution(List<T> state, List<T> choices)
+    private bool IsSolution(List<T> state, T[] choices)
     {
-        return state.Count == choices.Count;
+        return state.Count == choices.Length;
     }
 
     private void RecordSolution(List<T> state, List<List<T>> res)

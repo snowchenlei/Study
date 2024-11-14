@@ -3,5 +3,7 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::2B9B5E72-CA77-46EB-B456-FFA94391076A::net8.0::AlgorithmTest.PermutationTest.V2_Test&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::2B9B5E72-CA77-46EB-B456-FFA94391076A::net8.0::AlgorithmTest.Algorithms.SortingTest.ShellSortTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2B9B5E72-CA77-46EB-B456-FFA94391076A::net8.0::AlgorithmTest.SubsetSumTest.Test&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2B9B5E72-CA77-46EB-B456-FFA94391076A::net8.0::AlgorithmTest.SubsetSumTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
