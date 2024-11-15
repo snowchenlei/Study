@@ -12,51 +12,51 @@ public class NQueens
     /// <summary>
     /// 按照从上往下、从左往右的顺序
     /// </summary>
-    /// <param name="n"></param>
+    /// <param name="count">皇后数量</param>
     /// <returns></returns>
-    public List<List<List<string>>> Backtrack(int n)
+    public List<List<List<string>>> Backtrack(int count)
     {
         List<List<string>> state = new();
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < count; i++)
         {
             List<string> row = new();
-            for (int j = 0; j < n; j++)
+            for (int j = 0; j < count; j++)
             {
                 row.Add("#");
             }
             state.Add(row);
         }
-        bool[] cols = new bool[n];
-        bool[] mainDiagonals = new bool[2 * n - 1];
-        bool[] minorDiagonals = new bool[2 * n - 1];
+        bool[] cols = new bool[count];
+        bool[] mainDiagonals = new bool[2 * count - 1];
+        bool[] minorDiagonals = new bool[2 * count - 1];
         List<List<List<string>>> res = [];
-        Backtrack(n, 0, state, res, cols, mainDiagonals, minorDiagonals);
+        Backtrack(count, 0, state, res, cols, mainDiagonals, minorDiagonals);
         return res;
     }
 
     /// <summary>
     ///
     /// </summary>
-    /// <param name="n">皇后数</param>
+    /// <param name="count">皇后数</param>
     /// <param name="row">行数</param>
     /// <param name="state">矩阵</param>
     /// <param name="res">结果</param>
     /// <param name="cols">列标记</param>
     /// <param name="mainDiagonals">主对角线标记</param>
     /// <param name="minorDiagonals">次对角线标记</param>
-    private void Backtrack(int n, int row, List<List<string>> state, List<List<List<string>>> res, bool[] cols,
+    private void Backtrack(int count, int row, List<List<string>> state, List<List<List<string>>> res, bool[] cols,
         bool[] mainDiagonals, bool[] minorDiagonals)
     {
-        if (IsSolution(n, row))
+        if (IsSolution(count, row))
         {
             RecordSolution(state, res);
             return;
         }
 
-        for (int col = 0; col < n; col++)
+        for (int col = 0; col < count; col++)
         {
             // row和col在矩阵索引的取值范围是[0, n-1]，row-col数值范围是[-n+1, n-1]，而数组的索引不为负值（[0, 2n-2]），所以需要+n-1。
-            int mainDiagonal = row - col + n - 1;
+            int mainDiagonal = row - col + count - 1;
             int minorDiagonal = row + col;
             if (cols[col] || mainDiagonals[mainDiagonal] || minorDiagonals[minorDiagonal])
             {
@@ -64,7 +64,7 @@ public class NQueens
             }
 
             MakeChoice(row, col, state, cols, mainDiagonals, minorDiagonals, mainDiagonal, minorDiagonal);
-            Backtrack(n, row + 1, state, res, cols, mainDiagonals, minorDiagonals);
+            Backtrack(count, row + 1, state, res, cols, mainDiagonals, minorDiagonals);
             UndoChoice(row, col, state, cols, mainDiagonals, minorDiagonals, mainDiagonal, minorDiagonal);
         }
     }
