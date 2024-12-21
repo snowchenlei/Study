@@ -6,6 +6,13 @@
 /// <typeparam name="T"></typeparam>
 public class Permutations1<T>
 {
+    public List<List<T>> Backtrack(T[] nums)
+    {
+        List<List<T>> res = new();
+        Backtrack([], nums, new bool[nums.Length].ToList(), res);
+        return res;
+    }
+
     /// <summary>
     ///
     /// </summary>
@@ -13,14 +20,14 @@ public class Permutations1<T>
     /// <param name="choices">初始数据</param>
     /// <param name="selected">标记是否选过</param>
     /// <param name="res">满足条件的结果</param>
-    public void Backtrack(List<T> state, List<T> choices, List<bool> selected, List<List<T>> res)
+    private void Backtrack(List<T> state, T[] choices, List<bool> selected, List<List<T>> res)
     {
         if (IsSolution(state, choices))
         {
             RecordSolution(state, res);
         }
 
-        for (int i = 0; i < choices.Count; i++)
+        for (int i = 0; i < choices.Length; i++)
         {
             T choice = choices[i];
             if (!selected[i])
@@ -44,9 +51,9 @@ public class Permutations1<T>
         state.Add(choice);
     }
 
-    private bool IsSolution(List<T> state, List<T> choices)
+    private bool IsSolution(List<T> state, T[] choices)
     {
-        return state.Count == choices.Count;
+        return state.Count == choices.Length;
     }
 
     private void RecordSolution(List<T> state, List<List<T>> res)
